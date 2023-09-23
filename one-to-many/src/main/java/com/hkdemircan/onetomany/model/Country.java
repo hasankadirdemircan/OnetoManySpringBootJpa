@@ -14,7 +14,7 @@ public class Country {
     private int id;
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "country_id")//city class column name = country_id
     List<City> city;
 
